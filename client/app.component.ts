@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { Mongo } from 'meteor/mongo';
 import { Parties } from '../both/collections/parties.collections';
-
+import { PartiesFormComponent } from './imports/parties/parties-form.component';
 //noinspection TypeScriptCheckImport
 import template from './app.component.html';
 
 @Component({
     selector: 'app',
-    template
+    template,
+    directives: [PartiesFormComponent]
 })
 
 export class AppComponent {
