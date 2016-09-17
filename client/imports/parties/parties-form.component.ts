@@ -21,5 +21,10 @@ export class PartiesFormComponent {
 			description:[],
 			location:[]
 		});
+		/*
+			this.addForm = new FormGroup({
+  			name: new FormControl()
+			});
+		*/
 	}
 }
