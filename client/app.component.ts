@@ -13,8 +13,6 @@ import template from './app.component.html';
 
 export class AppComponent {
     parties:Mongo.Cursor<any>;
-
-
     constructor() {
         this.parties = Parties.find();
     }
