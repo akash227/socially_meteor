@@ -27,6 +27,9 @@ export class PartyDetailsComponent {
 				because we don't know if the subscription is ready by now.
 	      	*/
 	      	Tracker.autorun(() => {
+	      		/*
+					To apply any change of party to UI, we have to use NgZone.run() method.
+	      		*/
           		this.ngZone.run(() => {
             		this.party = Parties.findOne(this.partyId);
           		});
