@@ -7,5 +7,6 @@ import { AppComponent } from './app.component';
  
 bootstrap(AppComponent, [
   disableDeprecatedForms(),
-  provideForms()
+  provideForms(),
+  APP_ROUTER_PROVIDERS
 ]);
