@@ -12,4 +12,10 @@ export class PartyDetailsComponent {
 	partyId: string;
  
   	constructor(private route: ActivatedRoute) {}
+
+  	ngOnInit() {
+	    this.route.params
+	      .map(params => params['partyId'])
+	      .subscribe(partyId => this.partyId = partyId);
+  	}
 }
