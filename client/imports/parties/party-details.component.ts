@@ -50,3 +50,18 @@ export class PartyDetailsComponent {
   	}
 
 }
+
+@Component({
+  selector: 'party-details',
+  template,
+  directives: [ROUTER_DIRECTIVES]
+})
+export class PartyDetails implements CanActivate {
+
+
+  canActivate() {
+    const party = Parties.findOne(this.partyId);
+    return (party && party.owner == Meteor.userId());
+  }
+
+}
