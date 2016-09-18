@@ -9,7 +9,7 @@ import template from './parties-list.component.html';
 @Component({
   selector: 'parties-list',
   template,
-  directives: [PartiesFormComponent]
+  directives: [PartiesFormComponent, ROUTER_DIRECTIVES]
 })
 export class PartiesListComponent implements OnInit {
   parties: Mongo.Cursor<any>;
