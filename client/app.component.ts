@@ -5,6 +5,10 @@ import template from './app.component.html';
  
 @Component({
   selector: 'app',
-  template
+  template,
+  directives: [ROUTER_DIRECTIVES]
 })
-export class AppComponent {}
+
+export class AppComponent {
+
+}
