@@ -1,5 +1,5 @@
 import { RouterConfig, provideRouter } from '@angular/router';
- 
+import { Meteor } from 'meteor/meteor';
 import { PartiesListComponent } from './imports/parties/parties-list.component';
 import { PartyDetailsComponent } from './imports/parties/party-details.component';
  
