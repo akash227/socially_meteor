@@ -8,3 +8,8 @@ function loggedIn() {
   return !!Meteor.user();
 }
 
+Parties.allow({
+  insert: loggedIn,
+  update: loggedIn,
+  remove: loggedIn
+});
