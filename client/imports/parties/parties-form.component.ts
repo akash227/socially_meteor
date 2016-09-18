@@ -34,10 +34,15 @@ export class PartiesFormComponent implements OnInit {
 
   addParty() {
     if (this.addForm.valid) {
-      Parties.insert(this.addForm.value);
-
-      // XXX will be replaced by this.addForm.reset() in RC5+
-      this.resetForm();
+       if (Meteor.userId()) {
+        Parties.insert(this.addForm.value);
+ 
+        // XXX will be replaced by this.addForm.reset() in RC5+
+        this.resetForm();
+      } else {
+        alert('Please log in to add a party');
+      }
+     
     }
   }
 }
