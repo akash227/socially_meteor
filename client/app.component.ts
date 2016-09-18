@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-
+ 
 import template from './app.component.html';
  
 @Component({
@@ -8,7 +8,4 @@ import template from './app.component.html';
   template,
   directives: [ROUTER_DIRECTIVES]
 })
-
-export class AppComponent {
-
-}
+export class AppComponent {}

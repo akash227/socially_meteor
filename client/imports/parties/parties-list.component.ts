@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mongo } from 'meteor/mongo';
- 
+import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Parties }   from '../../../both/collections/parties.collections';
 import { PartiesFormComponent } from './parties-form.component';
  
