@@ -12,12 +12,15 @@ import template from './party-details.component.html';
 
 export class PartyDetailsComponent {
 	partyId: string;
- 
+ 	party: any;
+
   	constructor(private route: ActivatedRoute) {}
 
   	ngOnInit() {
 	    this.route.params
 	      .map(params => params['partyId'])
-	      .subscribe(partyId => this.partyId = partyId);
+	      .subscribe(partyId => {
+	      	this.partyId = partyId;
+	      });
   	}
 }
