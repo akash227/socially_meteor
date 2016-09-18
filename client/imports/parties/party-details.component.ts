@@ -9,5 +9,7 @@ import template from './party-details.component.html';
 })
 
 export class PartyDetailsComponent {
-	
+	partyId: string;
+ 
+  	constructor(private route: ActivatedRoute) {}
 }
