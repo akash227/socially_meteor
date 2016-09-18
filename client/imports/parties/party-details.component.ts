@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { Parties } from '../../../both/collections/parties.collections';
+
 import template from './party-details.component.html';
- 
+
 @Component({
   selector: 'party-details',
   template
