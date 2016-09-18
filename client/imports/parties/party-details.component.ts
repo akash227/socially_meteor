@@ -21,6 +21,7 @@ export class PartyDetailsComponent {
 	      .map(params => params['partyId'])
 	      .subscribe(partyId => {
 	      	this.partyId = partyId;
+	      	this.party = Parties.findOne(this.partyId);
 	      });
   	}
 }
