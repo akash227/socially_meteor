@@ -12,10 +12,10 @@ import { Meteor } from 'meteor/meteor';
   template,
   directives: [REACTIVE_FORM_DIRECTIVES]
 })
-
+@InjectUser('user')
 export class PartiesFormComponent implements OnInit {
   addForm: FormGroup;
-
+  user: Meteor.User;
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
