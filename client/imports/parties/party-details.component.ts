@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { Tracker } from 'meteor/tracker';
 import { Parties } from '../../../both/collections/parties.collections';
 
 import template from './party-details.component.html';
@@ -21,7 +21,10 @@ export class PartyDetailsComponent {
 	      .map(params => params['partyId'])
 	      .subscribe(partyId => {
 	      	this.partyId = partyId;
-	      	this.party = Parties.findOne(this.partyId);
+	      	
+	      	Tracker.autorun(() => {
+          		this.party = Parties.findOne(this.partyId);
+        	});
 	      });
   	}
 }
