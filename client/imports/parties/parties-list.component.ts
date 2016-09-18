@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Mongo } from 'meteor/mongo';
  
-import { Parties }   from '../../../both/collections/parties.collection';
+import { Parties }   from '../../../both/collections/parties.collections';
 import { PartiesFormComponent } from './parties-form.component';
  
 import template from './parties-list.component.html';
