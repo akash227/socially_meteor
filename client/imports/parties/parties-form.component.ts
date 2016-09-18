@@ -5,6 +5,8 @@ import { Parties } from '../../../both/collections/parties.collections';
 
 import template from './parties-form.component.html';
 
+import { Meteor } from 'meteor/meteor';
+
 @Component({
   selector: 'parties-form',
   template,
