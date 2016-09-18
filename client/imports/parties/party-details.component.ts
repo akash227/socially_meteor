@@ -3,6 +3,7 @@ import { ActivatedRoute, ROUTER_DIRECTIVES } from '@angular/router';
 import { Tracker } from 'meteor/tracker';
 import { Party } from '../../../both/interfaces/party.interface';
 import { Parties } from '../../../both/collections/parties.collections';
+import { CanActivate } from '@angular/router';
 
 import template from './party-details.component.html';
 
