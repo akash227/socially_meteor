@@ -6,7 +6,7 @@ import { PartyDetailsComponent } from './imports/parties/party-details.component
 // routes array contains the routes of the pages that are going to be used 
 const routes: RouterConfig = [
   { path: '', component: PartiesListComponent },
-  { path: 'party/:partyId', component: PartyDetailsComponent }
+  { path: 'party/:partyId', component: PartyDetailsComponent, canActivate: ['CanActivateForLoggedIn'] }
 ];
  
 export const APP_ROUTER_PROVIDERS = [
