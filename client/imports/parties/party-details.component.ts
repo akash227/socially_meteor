@@ -21,7 +21,10 @@ export class PartyDetailsComponent {
 	      .map(params => params['partyId'])
 	      .subscribe(partyId => {
 	      	this.partyId = partyId;
-	      	
+	      	/*
+				To make it reactive, we use Tracker 
+				because we don't know if the subscription is ready by now.
+	      	*/
 	      	Tracker.autorun(() => {
           		this.party = Parties.findOne(this.partyId);
         	});
