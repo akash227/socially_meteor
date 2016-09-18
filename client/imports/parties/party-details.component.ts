@@ -1,7 +1,7 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { ActivatedRoute, ROUTER_DIRECTIVES } from '@angular/router';
 import { Tracker } from 'meteor/tracker';
-
+import { Party } from '../../../both/interfaces/party.interface';
 import { Parties } from '../../../both/collections/parties.collections';
 
 import template from './party-details.component.html';
@@ -14,7 +14,7 @@ import template from './party-details.component.html';
 
 export class PartyDetailsComponent {
 	partyId: string;
- 	party: any;
+ 	party: Party;
 
   	constructor(private route: ActivatedRoute, private ngZone: NgZone) {}
 
