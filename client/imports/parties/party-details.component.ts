@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
- 
+import { ActivatedRoute } from '@angular/router';
+
 import template from './party-details.component.html';
  
 @Component({
