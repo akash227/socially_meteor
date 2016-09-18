@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Mongo } from 'meteor/mongo';
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Party } from '../../../both/interfaces/party.interface';
 import { Parties }   from '../../../both/collections/parties.collections';
 import { PartiesFormComponent } from './parties-form.component';
  
@@ -12,7 +13,7 @@ import template from './parties-list.component.html';
   directives: [PartiesFormComponent, ROUTER_DIRECTIVES]
 })
 export class PartiesListComponent implements OnInit {
-  parties: Mongo.Cursor<any>;
+  parties: Mongo.Cursor<Party>;
  
   ngOnInit() {
     this.parties = Parties.find();
