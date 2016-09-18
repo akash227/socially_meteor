@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { REACTIVE_FORM_DIRECTIVES, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { Parties } from '../../../both/collections/parties.collections';
-
+import { InjectUser } from 'angular2-meteor-accounts-ui';
 import template from './parties-form.component.html';
 
 import { Meteor } from 'meteor/meteor';
