@@ -21,9 +21,15 @@ export class PartiesListComponent extends MeteorComponent implements OnInit {
   constructor() {
     super();
   }
-  
+
   ngOnInit() {
+    
     this.parties = Parties.find();
+    
+    this.subscribe('parties', () => {
+      this.parties = Parties.find();
+      }, true);
+
   }
  
   removeParty(party) {
