@@ -18,6 +18,10 @@ import template from './parties-list.component.html';
 export class PartiesListComponent extends MeteorComponent implements OnInit {
   parties: Mongo.Cursor<Party>;
  
+  constructor() {
+    super();
+  }
+  
   ngOnInit() {
     this.parties = Parties.find();
   }
