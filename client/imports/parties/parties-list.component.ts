@@ -5,6 +5,7 @@ import { Party } from '../../../both/interfaces/party.interface';
 import { Parties }   from '../../../both/collections/parties.collections';
 import { PartiesFormComponent } from './parties-form.component';
 import { LoginButtons } from 'angular2-meteor-accounts-ui';
+import { MeteorComponent } from 'angular2-meteor';
 
 import template from './parties-list.component.html';
  
