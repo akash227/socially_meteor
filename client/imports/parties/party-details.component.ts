@@ -4,6 +4,7 @@ import { Tracker } from 'meteor/tracker';
 import { Party } from '../../../both/interfaces/party.interface';
 import { Parties } from '../../../both/collections/parties.collections';
 import { CanActivate } from '@angular/router';
+import { Meteor } from 'meteor/meteor';
 
 import template from './party-details.component.html';
 
@@ -40,28 +41,18 @@ export class PartyDetailsComponent {
   	}
 
   	saveParty() {
-	    Parties.update(this.party._id, {
-	      $set: {
-	        name: this.party.name,
-	        description: this.party.description,
-	        location: this.party.location
-	      }
-	    });
+	    if (Meteor.userId()) {
+	      Parties.update(this.party._id, {
+	        $set: {
+	          name: this.party.name,
+	          description: this.party.description,
+	          location: this.party.location
+	        }
+	      });
+	    } else {
+	      alert('Please log in to change this party');
+	    }
   	}
 
 }
 
-@Component({
-  selector: 'party-details',
-  template,
-  directives: [ROUTER_DIRECTIVES]
-})
-export class PartyDetails implements CanActivate {
-
-
-  canActivate() {
-    const party = Parties.findOne(this.partyId);
-    return (party && party.owner == Meteor.userId());
-  }
-
-}
