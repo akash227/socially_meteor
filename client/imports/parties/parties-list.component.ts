@@ -14,7 +14,8 @@ import template from './parties-list.component.html';
   template,
   directives: [PartiesFormComponent, ROUTER_DIRECTIVES, LoginButtons]
 })
-export class PartiesListComponent implements OnInit {
+
+export class PartiesListComponent extends MeteorComponent implements OnInit {
   parties: Mongo.Cursor<Party>;
  
   ngOnInit() {
